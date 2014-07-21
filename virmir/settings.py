@@ -44,6 +44,10 @@ INSTALLED_APPS = (
     'apps.home',
 )
 
+#PIPELINE_COMPILERS  =  (
+#  'react.utils.pipeline.JSXCompiler' ,
+#)
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -104,3 +108,4 @@ MEDIA_URL = '/media/'
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),
 )
+

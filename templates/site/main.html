@@ -2,8 +2,29 @@
 <html>
 <head>
     <title></title>
+    <script src="/static/virmir/react.min.js"></script>
+    <script src="/static/virmir/JSXTransformer.js"></script>
 </head>
 <body>
+
+<div id="vir-mir"></div>
+<script type="text/jsx">
+    /** @jsx React.DOM */
+    var CommentBox = React.createClass({
+      render: function() {
+        return (
+          <div className="commentBox">
+            Hello, world! I am a CommentBox.
+          </div>
+        );
+      }
+    });
+    React.renderComponent(
+      <CommentBox />,
+      document.getElementById('vir-mir')
+    );
+</script>
+
 
 </body>
 </html>
