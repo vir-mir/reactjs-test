@@ -7,8 +7,6 @@ from django.conf import settings
 admin.autodiscover()
 
 
-urlpatterns = patterns('')
-
 urlpatterns = patterns(
     '',
     url(r'^$', 'apps.home.views.home_views', name='home'),
