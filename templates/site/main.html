@@ -2,25 +2,23 @@
 <html>
 <head>
     <title></title>
-    <script src="/static/virmir/react.min.js"></script>
-    <script src="/static/virmir/JSXTransformer.js"></script>
+
+    <link rel="stylesheet" href="/static/prod/main.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/static/virmir/js/react.min.js"></script>
+    <script src="/static/virmir/js/JSXTransformer.js"></script>
+    <script src="/static/virmir/react/controller.jsx" type="text/jsx"></script>
+    <script src="/static/virmir/react/left.jsx" type="text/jsx"></script>
 </head>
 <body>
 
 <div id="vir-mir"></div>
 <script type="text/jsx">
     /** @jsx React.DOM */
-    var CommentBox = React.createClass({
-      render: function() {
-        return (
-          <div className="commentBox">
-            Hello, world! I am a CommentBox.
-          </div>
-        );
-      }
-    });
     React.renderComponent(
-      <CommentBox />,
+      <vir_mir />,
       document.getElementById('vir-mir')
     );
 </script>
