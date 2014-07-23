@@ -3,34 +3,30 @@
 var vir_mir_left = React.createClass({
     render: function () {
         return (
-            <div className="pure-menu pure-menu-open left__vir_mir">
-                <span className="glyphicon glyphicon-search"></span>
-                <a className="pure-menu-heading">Yahoo! Sites</a>
-                <ul>
-                    <li>
-                        <a href="#">Flickr</a>
-                    </li>
-                    <li className="pure-menu-selected">
-                        <a href="#">Messenger</a>
+            <nav className="navbar navbar-inverse navbar-fixed-top left__vir_mir" role="navigation">
+                <ul className="nav navbar-nav">
+                    <li className="active">
+                        <a className="logo" href="/">
+                            <img src="/static/img/logo.png" title="Виртуальный мир" />
+                        </a>
                     </li>
                     <li>
-                        <a href="#">Sports</a>
+                        <a href="#">
+                            <i  className="glyphicon glyphicon-lock"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="#">Finance</a>
-                    </li>
-                    <li class="pure-menu-heading">More Sites!</li>
-                    <li>
-                        <a href="#">Games</a>
+                        <a href="#">
+                            <i className="glyphicon glyphicon-th"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="#">News</a>
-                    </li>
-                    <li>
-                        <a href="#">OMG!</a>
+                        <a href="#">
+                            <i className="glyphicon glyphicon-search"></i>
+                        </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             );
     }
 });
