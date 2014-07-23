@@ -1,0 +1,36 @@
+body {
+  padding: 0 0 0 80px;
+}
+
+#vir-mir {
+  .content {
+    padding: 20px 0;
+
+    .image__left {
+      margin: 0 15px 15px 0;
+    }
+
+    .date__posts {
+      font-size: $s__small;
+      color: $c__date__post;
+    }
+
+    .icon__posts {
+      a {
+        color: $c__icon__post;
+        padding-right: 13px;
+        font-size: $s__small;
+
+        i {
+          padding-right: 5px;
+        }
+
+        &:hover {
+          color: $c__icon__post__hover;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}

@@ -1,6 +1,16 @@
 #vir-mir {
 
   .left__vir_mir {
-    width: 100px;
+    width: 68px;
+    height: 100%;
+    position: fixed;
+
+    .logo {
+      padding: 13px 3px;
+    }
+
+    i.glyphicon {
+      font-size: 38px;
+    }
   }
 }

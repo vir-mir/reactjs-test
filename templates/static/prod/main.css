@@ -6759,6 +6759,41 @@ button.close {
     display: none !important;
   }
 }
+body {
+  padding: 0 0 0 80px;
+}
+
+#vir-mir .content {
+  padding: 20px 0;
+}
+#vir-mir .content .image__left {
+  margin: 0 15px 15px 0;
+}
+#vir-mir .content .date__posts {
+  font-size: 13px;
+  color: #c1c1c1;
+}
+#vir-mir .content .icon__posts a {
+  color: #c1c1c1;
+  padding-right: 13px;
+  font-size: 13px;
+}
+#vir-mir .content .icon__posts a i {
+  padding-right: 5px;
+}
+#vir-mir .content .icon__posts a:hover {
+  color: lightgray;
+  text-decoration: none;
+}
+
 #vir-mir .left__vir_mir {
-  width: 100px;
+  width: 68px;
+  height: 100%;
+  position: fixed;
+}
+#vir-mir .left__vir_mir .logo {
+  padding: 13px 3px;
+}
+#vir-mir .left__vir_mir i.glyphicon {
+  font-size: 38px;
 }

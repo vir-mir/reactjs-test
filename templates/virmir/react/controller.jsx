@@ -1,10 +1,13 @@
 /** @jsx React.DOM */
 
 var vir_mir = React.createClass({
-      render: function() {
+    render: function () {
         return (
-          <vir_mir_left />
-        );
-      }
-    });
+            <div className='content'>
+                <vir_mir_left />
+                <vir_mir_body />
+            </div>
+            );
+    }
+});
 
