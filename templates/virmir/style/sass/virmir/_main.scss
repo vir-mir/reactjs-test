@@ -3,34 +3,58 @@ body {
 }
 
 #vir-mir {
+
+  h1, h2, h3,
+  h4, h5, h6 {
+    a {
+      text-decoration: none;
+      color: $c__h__a;
+
+      &:hover {
+        color: $c__h__a_hover;
+      }
+    }
+  }
+
+  a {
+    transition: .7s;
+    &:hover {
+      text-decoration: none;
+      transition: .7s;
+    }
+  }
+
   .content {
     padding: 20px 0;
 
-    .image__left {
-      margin: 0 15px 15px 0;
-    }
+    .content__main {
+      padding-right: 320px;
 
-    .date__posts {
-      font-size: $s__small;
-      color: $c__date__post;
-    }
+      .image__left {
+        margin: 0 15px 15px 0;
+      }
 
-    .icon__posts {
-      a {
-        color: $c__icon__post;
-        padding-right: 13px;
+      .date__posts {
         font-size: $s__small;
+        color: $c__date__post;
+      }
 
-        i {
-          padding-right: 5px;
-        }
+      .icon__posts {
+        a {
+          color: $c__icon__post;
+          padding-right: 13px;
+          font-size: $s__small;
 
-        &:hover {
-          color: $c__icon__post__hover;
-          text-decoration: none;
+          i {
+            padding-right: 5px;
+          }
+
+          &:hover {
+            color: $c__icon__post__hover;
+            text-decoration: none;
+          }
         }
       }
     }
-
   }
 }

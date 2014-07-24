@@ -6763,26 +6763,45 @@ body {
   padding: 0 0 0 80px;
 }
 
+#vir-mir h1 a, #vir-mir h2 a, #vir-mir h3 a,
+#vir-mir h4 a, #vir-mir h5 a, #vir-mir h6 a {
+  text-decoration: none;
+  color: #424242;
+}
+#vir-mir h1 a:hover, #vir-mir h2 a:hover, #vir-mir h3 a:hover,
+#vir-mir h4 a:hover, #vir-mir h5 a:hover, #vir-mir h6 a:hover {
+  color: #dd4242;
+}
+#vir-mir a {
+  transition: .7s;
+}
+#vir-mir a:hover {
+  text-decoration: none;
+  transition: .7s;
+}
 #vir-mir .content {
   padding: 20px 0;
 }
-#vir-mir .content .image__left {
+#vir-mir .content .content__main {
+  padding-right: 320px;
+}
+#vir-mir .content .content__main .image__left {
   margin: 0 15px 15px 0;
 }
-#vir-mir .content .date__posts {
+#vir-mir .content .content__main .date__posts {
   font-size: 13px;
   color: #c1c1c1;
 }
-#vir-mir .content .icon__posts a {
+#vir-mir .content .content__main .icon__posts a {
   color: #c1c1c1;
   padding-right: 13px;
   font-size: 13px;
 }
-#vir-mir .content .icon__posts a i {
+#vir-mir .content .content__main .icon__posts a i {
   padding-right: 5px;
 }
-#vir-mir .content .icon__posts a:hover {
-  color: lightgray;
+#vir-mir .content .content__main .icon__posts a:hover {
+  color: #424242;
   text-decoration: none;
 }
 
