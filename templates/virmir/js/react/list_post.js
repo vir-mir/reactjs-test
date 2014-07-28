@@ -2,6 +2,31 @@
 
 var vir_mir_list_post = React.createClass({displayName: 'vir_mir_list_post',
 
+    getInitialState: function () {
+        return {
+            html: React.DOM.div( {className:"text-center"}, "Загрузка")
+        };
+    },
+
+    componentDidMount: function () {
+        var callback = function (self, data) {
+            self.setState({
+                html: vir_mir_post( {data:data} )
+            });
+        };
+
+        router.ajax(this, callback);
+
+    },
+
+    render: function () {
+        return this.state.html;
+    }
+});
+
+
+var vir_mir_post = React.createClass({displayName: 'vir_mir_post',
+
     render: function () {
         return (
             React.DOM.div( {className:"row"}, 
@@ -14,7 +39,9 @@ var vir_mir_list_post = React.createClass({displayName: 'vir_mir_list_post',
                     ),
                     React.DOM.div( {className:"text"}, 
                         React.DOM.p(null, 
-                        " Lorem ipsum ", React.DOM.a( {href:"#"}, "dolor sit amet"),", consectetur adipiscing elit. Morbi hendrerit fringilla purus at aliquam. Mauris auctor pharetra enim a pellentesque. Nullam vel tortor commodo, facilisis arcu ut, tincidunt felis. Aliquam vehicula a dui at aliquet. Integer blandit odio varius, iaculis metus eget, porta dui. Mauris elit diam, vulputate in pharetra vel, molestie vestibulum tellus. Nunc pretium facilisis sodales. Vivamus massa nisl, mattis id mattis ac, tristique et diam. Suspendisse potenti. Suspendisse suscipit rutrum lectus, quis imperdiet felis posuere vel. Integer interdum justo quis eros luctus, eu gravida odio scelerisque. Fusce quis arcu vitae orci interdum imperdiet a in urna. Aliquam non est ornare justo facilisis ornare. Integer luctus euismod orci a facilisis. Praesent semper congue tristique. "
+                        " Lorem ipsum ",
+                            React.DOM.a( {href:"#"}, "dolor sit amet"),
+                        " , consectetur adipiscing elit. Morbi hendrerit fringilla purus at aliquam. Mauris auctor pharetra enim a pellentesque. Nullam vel tortor commodo, facilisis arcu ut, tincidunt felis. Aliquam vehicula a dui at aliquet. Integer blandit odio varius, iaculis metus eget, porta dui. Mauris elit diam, vulputate in pharetra vel, molestie vestibulum tellus. Nunc pretium facilisis sodales. Vivamus massa nisl, mattis id mattis ac, tristique et diam. Suspendisse potenti. Suspendisse suscipit rutrum lectus, quis imperdiet felis posuere vel. Integer interdum justo quis eros luctus, eu gravida odio scelerisque. Fusce quis arcu vitae orci interdum imperdiet a in urna. Aliquam non est ornare justo facilisis ornare. Integer luctus euismod orci a facilisis. Praesent semper congue tristique. "
                         ),
                         React.DOM.p(null, 
                         " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit fringilla purus at aliquam. Mauris auctor pharetra enim a pellentesque. Nullam vel tortor commodo, facilisis arcu ut, tincidunt felis. Aliquam vehicula a dui at aliquet. Integer blandit odio varius, iaculis metus eget, porta dui. Mauris elit diam, vulputate in pharetra vel, molestie vestibulum tellus. Nunc pretium facilisis sodales. Vivamus massa nisl, mattis id mattis ac, tristique et diam. Suspendisse potenti. Suspendisse suscipit rutrum lectus, quis imperdiet felis posuere vel. Integer interdum justo quis eros luctus, eu gravida odio scelerisque. Fusce quis arcu vitae orci interdum imperdiet a in urna. Aliquam non est ornare justo facilisis ornare. Integer luctus euismod orci a facilisis. Praesent semper congue tristique. "
@@ -47,6 +74,7 @@ var vir_mir_list_post = React.createClass({displayName: 'vir_mir_list_post',
                     React.DOM.hr(null )
                 )
             )
-            );
+            )
     }
 });
+
