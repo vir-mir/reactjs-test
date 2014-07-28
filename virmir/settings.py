@@ -10,6 +10,9 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -31,7 +34,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+AUTH_USER_MODEL = 'user.User'
+
 INSTALLED_APPS = (
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,7 +48,11 @@ INSTALLED_APPS = (
     'mptt',
     'sorl.thumbnail',
     'apps.home',
+    'apps.post',
+    'apps.blog',
+    'apps.user',
 )
+
 
 #PIPELINE_COMPILERS  =  (
 #  'react.utils.pipeline.JSXCompiler' ,
@@ -110,3 +120,6 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
+)
