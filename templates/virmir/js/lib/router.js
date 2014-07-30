@@ -19,6 +19,9 @@ function Router() {
                 "type": "small" // or full
             }
         },
+        "/posts/": {
+            "tag": vir_mir_add_form
+        },
         "404": {
             "js": ""
         }
@@ -43,8 +46,14 @@ Router.prototype.setRouter = function () {
 }
 
 Router.prototype.getTag = function () {
-    var routerMain = this.routerMain[this.url];
-    return routerMain.tag(null, {url: routerMain.url, method: routerMain.method, param: routerMain.param})
+    var routerMain = this.routerMain[this.url],
+        data = null;
+
+    if (routerMain['url']) {
+        data = {url: routerMain.url, method: routerMain.method, param: routerMain.param}
+    }
+
+    return routerMain.tag(null, data)
 }
 
 Router.prototype.ajax = function (self, callback, callbackError) {
