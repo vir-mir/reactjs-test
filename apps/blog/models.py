@@ -10,6 +10,6 @@ class Blog(models.Model):
     date = models.DateTimeField(verbose_name=u"Дата написание поста")
     user = models.ForeignKey(get_user_model())
 
-    s_title = models.CharField(verbose_name=u"SEO заголовок", max_length=255)
-    s_keyword = models.CharField(verbose_name=u"SEO ключи", max_length=255)
-    s_description = models.CharField(verbose_name=u"SEO описание", max_length=255)
+    s_title = models.CharField(verbose_name=u"SEO заголовок", max_length=255, null=True, blank=True)
+    s_keyword = models.CharField(verbose_name=u"SEO ключи", max_length=255, null=True, blank=True)
+    s_description = models.CharField(verbose_name=u"SEO описание", max_length=255, null=True, blank=True)
